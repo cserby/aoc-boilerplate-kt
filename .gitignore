@@ -5,10 +5,11 @@ build/
 !**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/*
+!.idea/ai-config.xml
+!.idea/externalDependencies.xml
+!.idea/INTELLIJ_AI_SETUP.md
+!.idea/inspectionProfiles/
 *.iws
 *.iml
 *.ipr
@@ -39,7 +40,9 @@ bin/
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 ### Mac OS ###
 .DS_Store
