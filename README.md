@@ -4,7 +4,7 @@ A minimal Kotlin project template with testing and code quality tools configured
 
 ## Features
 
-- **Kotlin 2.0.21** with JVM toolchain 21
+- **Kotlin 2.1.0** with JVM toolchain 21
 - **kotlin-test** for testing with JUnit Platform
 - **ktlint** configured with official code style
 - **EditorConfig** for consistent formatting
