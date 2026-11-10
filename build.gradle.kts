@@ -1,17 +1,20 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
-    id("org.jlleitschuh.gradle.ktlint") version "12.1.2"
-}
-
-kotlin {
-    jvmToolchain(21)
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.ktlint)
 }
 
 group = "org.cserby"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+kotlin {
+    jvmToolchain(25)
+    compilerOptions {
+        allWarningsAsErrors = true
+    }
+}
+
+ktlint {
+    version = libs.versions.ktlint.cli
 }
 
 dependencies {
@@ -20,4 +23,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+        showStandardStreams = true
+    }
 }
